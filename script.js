@@ -325,17 +325,6 @@ window.addEventListener('keydown', (e) => {
 });
 
 
-// --- 4. TICKET BOOKING SIMULATION (DEACTIVATED) ---
-/*
-function bookTicket(locationName) {
-  const userName = prompt(`Для бронювання квитків на ритуал у [ ${locationName.toUpperCase()} ], введіть ваше ім'я:`);
-  if (userName) {
-    alert(`СМЕРТНИЙ ${userName.toUpperCase()}!\nКвиток успішно заброньовано. Перевірте пошту для завершення транзакції.\nДо зустрічі під сценою! 🤘`);
-  }
-}
-*/
-
-
 // --- 5. NEWSLETTER REGISTER SIMULATION ---
 const newsletterForm = document.getElementById('newsletter-form');
 const signupSuccess = document.getElementById('signup-success');
