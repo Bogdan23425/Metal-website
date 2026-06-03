@@ -3,7 +3,7 @@
 **Дисципліна:** Веб-технології та веб-дизайн  
 **Тема:** Створення адаптивного веб-інтерфейсу з використанням Tailwind CSS  
 **Варіант:** №14 (Музичний гурт)  
-🔗 **Live Preview:** [Перейти на Live сайт на Render](https://metal-website-render.onrender.com)
+🔗 **Live Preview:** [Перейти на Live сайт на Render](https://metal-website.onrender.com)
 
 ---
 
