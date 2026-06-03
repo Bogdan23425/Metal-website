@@ -1,0 +1,45 @@
+/* Styling custom scrollbars for that raw gothic/industrial feel */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+::-webkit-scrollbar-thumb {
+  background: #dc2626;
+  border: 2px solid #000000;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #ef4444;
+}
+
+/* Text stroke utility for metal style outlines */
+.text-outline-red {
+  -webkit-text-stroke: 1.5px #dc2626;
+  color: transparent;
+}
+.text-outline-white {
+  -webkit-text-stroke: 1.5px #ffffff;
+  color: transparent;
+}
+
+/* Custom style for interactive range sliders without default styling */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #27272a;
+  cursor: pointer;
+}
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 6px;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: #dc2626;
+  height: 16px;
+  width: 16px;
+  margin-top: -5px;
+  border-radius: 0px;
+  border: 1px solid #ffffff;
+}

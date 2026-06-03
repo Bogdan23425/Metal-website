@@ -1,0 +1,838 @@
+<!doctype html>
+<html lang="uk" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- SEO Meta Tags -->
+  <title>NEKROKORP // Official Metal Band Site</title>
+  <meta name="description" content="Official website of NEKROKORP - Industrial Death Metal band. Get the new EP 'Throne of Rust', check tour dates, and join the coven.">
+  <meta name="keywords" content="NEKROKORP, Metal Band, Death Metal, Tour, Throne of Rust, Music, Concerts">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Oswald:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            metal: ['"Metal Mania"', 'serif'],
+            sans: ['Oswald', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          },
+          colors: {
+            metalred: {
+              DEFAULT: '#dc2626',
+              dark: '#991b1b',
+              light: '#ef4444',
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Scrollbar & Utility Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-black text-zinc-100 font-sans tracking-wide antialiased selection:bg-red-600 selection:text-black">
+
+  <!-- ==================== HEADER / NAVIGATION ==================== -->
+  <header id="header" class="sticky top-0 z-50 bg-black border-b-4 border-red-600">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
+      <!-- Logo with Guitar Motif -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <!-- Stylized Guitar Custom SVG Icon -->
+        <svg class="w-8 h-8 text-red-600 transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110" viewBox="0 0 24 24" fill="currentColor">
+          <!-- Custom guitar shape: aggressive, angular angles -->
+          <path d="M12 1.5l1.5 3h-3l1.5-3zm-1 3.5h2v6.5h-2v-6.5zm-3.5 8c0-1.8 1.1-3.2 2.7-3.7l-.4 3.7h3.6l-.4-3.7c1.6.5 2.7 1.9 2.7 3.7 0 2.5-2.2 4-4.6 4s-4.6-1.5-4.6-4zm3.1 4.5l-.2 5h2.2l-.2-5h-1.8zM4 14.5l1-1 2.5 1.5-1.5 2.5-2-3zm16 0l-1-1-2.5 1.5 1.5 2.5 2-3z"/>
+        </svg>
+        <span class="font-metal text-3xl text-red-600 tracking-wider group-hover:text-white transition-colors duration-150">
+          NEKROKORP
+        </span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 font-mono text-sm tracking-widest uppercase">
+        <a href="#hero" class="hover:text-red-600 hover:underline decoration-2 underline-offset-4 transition-colors">Home</a>
+        <a href="#player-section" class="hover:text-red-600 hover:underline decoration-2 underline-offset-4 transition-colors">Music</a>
+        <a href="#tour" class="hover:text-red-600 hover:underline decoration-2 underline-offset-4 transition-colors">Rituals</a>
+        <a href="#releases" class="hover:text-red-600 hover:underline decoration-2 underline-offset-4 transition-colors">Vault</a>
+        <a href="#gallery" class="hover:text-red-600 hover:underline decoration-2 underline-offset-4 transition-colors">Live</a>
+        <a href="#join" class="hover:text-red-600 hover:underline decoration-2 underline-offset-4 transition-colors">Join</a>
+      </nav>
+
+      <!-- CTA Action Button -->
+      <div class="hidden md:block">
+        <a href="#player-section" class="border-2 border-red-600 text-red-600 hover:bg-red-600 hover:text-black px-5 py-2 font-bold tracking-widest transition-all duration-150 uppercase">
+          Listen Now
+        </a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button id="mobile-menu-btn" class="md:hidden text-zinc-100 focus:outline-none focus:text-red-600 transition-colors" aria-label="Toggle menu">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+          <path stroke-linecap="square" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="hidden md:hidden bg-zinc-950 border-t-2 border-red-600 px-6 py-6 space-y-4">
+      <nav class="flex flex-col space-y-4 font-mono tracking-widest uppercase text-lg">
+        <a href="#hero" class="mobile-nav-link text-zinc-300 hover:text-red-600 transition-colors">Home</a>
+        <a href="#player-section" class="mobile-nav-link text-zinc-300 hover:text-red-600 transition-colors">Music</a>
+        <a href="#tour" class="mobile-nav-link text-zinc-300 hover:text-red-600 transition-colors">Rituals</a>
+        <a href="#releases" class="mobile-nav-link text-zinc-300 hover:text-red-600 transition-colors">Vault</a>
+        <a href="#gallery" class="mobile-nav-link text-zinc-300 hover:text-red-600 transition-colors">Live</a>
+        <a href="#join" class="mobile-nav-link text-zinc-300 hover:text-red-600 transition-colors">Join</a>
+      </nav>
+      <div class="pt-4 border-t border-zinc-800">
+        <a href="#player-section" class="mobile-nav-link block text-center bg-red-600 text-black font-bold py-3 uppercase tracking-wider hover:bg-white transition-all">
+          Listen Now
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="hero" class="min-h-[85vh] flex items-center bg-black py-16 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+      <!-- Background mesh texture mock -->
+      <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#dc2626_1px,transparent_1px)] [background-size:24px_24px] pointer-events-none"></div>
+      
+      <div class="max-w-7xl mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+        <!-- Hero Details -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="inline-flex items-center gap-2 border border-red-600 px-3 py-1 bg-zinc-950 font-mono text-red-500 text-xs tracking-widest uppercase">
+            <span class="w-2 h-2 bg-red-600 animate-ping"></span>
+            NEW EP RELEASED OUT OF CHAOS
+          </div>
+          
+          <div class="space-y-2">
+            <h1 class="text-7xl sm:text-8xl lg:text-9xl font-metal font-bold text-white tracking-wider leading-none">
+              NEKRO<br><span class="text-red-600">KORP</span>
+            </h1>
+            <h2 class="text-2xl sm:text-3xl font-mono text-zinc-400 font-bold uppercase tracking-widest mt-2">
+              [ INDUSTRIAL DEATH METAL ]
+            </h2>
+          </div>
+          
+          <p class="text-zinc-400 font-mono text-base max-w-xl leading-relaxed">
+            THE NEW SONIC BLOW "THRONE OF RUST" IS AN UNCOMPROMISING CRUCIBLE OF DISTORTED SYNTHS, INDUSTRIAL BEATS, AND BRUTAL RIFFS. NO COMPROMISE. NO COWARDICE.
+          </p>
+
+          <div class="flex flex-col sm:flex-row gap-4 pt-4">
+            <a href="#player-section" class="bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 font-bold text-lg px-8 py-4 uppercase tracking-widest transition-all duration-150 flex items-center justify-center gap-3">
+              <!-- Custom Play Icon -->
+              <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z"/>
+              </svg>
+              Listen Now
+            </a>
+            <a href="#tour" class="border-2 border-zinc-100 hover:bg-zinc-100 hover:text-black font-bold text-lg px-8 py-4 uppercase tracking-widest transition-all duration-150 text-center">
+              Ritual Dates
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Artwork with Brutalist Shadow -->
+        <div class="lg:col-span-5 flex justify-center lg:justify-end">
+          <div class="relative w-full max-w-[400px] aspect-square bg-zinc-950 border-4 border-red-600 shadow-[10px_10px_0px_0px_rgba(220,38,38,1)]">
+            <img 
+              src="assets/hero_art.png" 
+              alt="Nekrokorp Guitarist Stage Illustration" 
+              class="w-full h-full object-cover filter grayscale contrast-125 select-none"
+              loading="eager"
+            >
+            <!-- Aggressive Label badge inside image -->
+            <div class="absolute bottom-4 left-4 bg-black border-2 border-red-600 px-4 py-2 font-mono text-xs tracking-widest text-white uppercase">
+              RUST IN NOISE // 2026
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== AUDIO PLAYER SECTION ==================== -->
+    <section id="player-section" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t-4 border-red-600">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 text-center">
+          <h2 class="text-5xl md:text-6xl font-metal text-red-600 tracking-wider">SOUNDS FROM THE VOID</h2>
+          <p class="font-mono text-zinc-400 mt-2 tracking-widest uppercase">STREAM THE NEW RITUALS BELOW</p>
+        </div>
+
+        <!-- Custom Brutalist Player Widget -->
+        <div class="max-w-4xl mx-auto bg-black border-4 border-red-600 p-6 md:p-8 flex flex-col md:flex-row gap-8 items-center shadow-[8px_8px_0px_0px_rgba(220,38,38,1)]">
+          
+          <!-- Player Left: Track Artwork & Info -->
+          <div class="w-full md:w-1/3 flex flex-col items-center text-center space-y-4">
+            <div class="w-48 h-48 bg-zinc-900 border-2 border-red-600 relative overflow-hidden group">
+              <img 
+                id="player-album-art" 
+                src="assets/album_vol3.png" 
+                alt="Album Cover" 
+                class="w-full h-full object-cover filter contrast-125 transition-transform duration-500"
+              >
+              <!-- Small spinning record overlay mockup -->
+              <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                <span class="text-xs font-mono tracking-widest text-red-600 uppercase">SPINNING</span>
+              </div>
+            </div>
+            <div>
+              <h3 id="player-track-title" class="text-2xl font-mono font-bold text-white uppercase tracking-wider">Throne of Rust</h3>
+              <p id="player-track-artist" class="text-red-500 font-mono tracking-widest text-xs uppercase mt-1">SLIPKNOT // METAL SELECTION</p>
+            </div>
+          </div>
+
+          <!-- Player Center: Controls & Visualizer -->
+          <div class="w-full md:w-2/3 flex flex-col justify-between space-y-6">
+            
+            <!-- Dynamic SVG Audio Visualizer (Simulated with JS) -->
+            <div class="bg-zinc-950 border border-zinc-800 h-24 p-4 flex items-end justify-between gap-1 overflow-hidden">
+              <!-- Visualizer Bars (16 total) -->
+              <div class="v-bar w-full bg-red-600 h-[10%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[25%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[45%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[60%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[80%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[90%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[70%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[50%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[35%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[55%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[75%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[85%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[95%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[65%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[40%]" style="transition: height 0.1s ease;"></div>
+              <div class="v-bar w-full bg-red-600 h-[15%]" style="transition: height 0.1s ease;"></div>
+            </div>
+
+            <!-- Time Display and Progress Slider -->
+            <div class="space-y-2">
+              <input 
+                id="player-seekbar" 
+                type="range" 
+                min="0" 
+                max="100" 
+                value="0" 
+                class="w-full accent-red-600 h-2 bg-zinc-900 border border-zinc-800"
+              >
+              <div class="flex justify-between items-center font-mono text-xs">
+                <span id="player-time-current" class="text-zinc-500">0:00</span>
+                <span id="player-status" class="text-red-600 font-bold uppercase tracking-widest animate-pulse">OFFLINE</span>
+                <span id="player-time-total" class="text-zinc-500">4:12</span>
+              </div>
+            </div>
+
+            <!-- Action Controls and Volume Bar -->
+            <div class="flex flex-col sm:flex-row items-center justify-between gap-4">
+              <!-- Audio Player Controls -->
+              <div class="flex items-center gap-4">
+                <!-- Prev Track -->
+                <button id="player-prev-btn" class="text-zinc-400 hover:text-red-500 transition-colors" aria-label="Previous Track">
+                  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                    <path d="M6 6h2v12H6zm3.5 6l8.5 6V6z"/>
+                  </svg>
+                </button>
+
+                <!-- Big Main Play/Pause Button -->
+                <button id="player-play-btn" class="bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 p-4 transition-all duration-150" aria-label="Play/Pause">
+                  <!-- Play SVG icon, dynamically switches to Pause -->
+                  <svg id="play-icon" class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                  <svg id="pause-icon" class="w-8 h-8 fill-current hidden" viewBox="0 0 24 24">
+                    <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                  </svg>
+                </button>
+
+                <!-- Next Track -->
+                <button id="player-next-btn" class="text-zinc-400 hover:text-red-500 transition-colors" aria-label="Next Track">
+                  <svg class="w-8 h-8 fill-current" viewBox="0 0 24 24">
+                    <path d="M6 18l8.5-6L6 6zm9-12v12h2V6z"/>
+                  </svg>
+                </button>
+              </div>
+
+              <!-- Volume Controller -->
+              <div class="flex items-center gap-2 w-full sm:w-1/3">
+                <svg class="w-5 h-5 text-zinc-500" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/>
+                </svg>
+                <input 
+                  id="player-volume" 
+                  type="range" 
+                  min="0" 
+                  max="100" 
+                  value="80" 
+                  class="w-full accent-red-600 h-1"
+                >
+              </div>
+            </div>
+
+            <!-- Interactively Clickable Track List -->
+            <div class="border-t border-zinc-800 pt-4">
+              <h4 class="font-mono text-zinc-500 text-xs tracking-widest uppercase mb-2">Tracklist:</h4>
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm font-mono">
+                <button class="track-select-btn flex justify-between p-2 bg-zinc-900 border border-zinc-800 hover:border-red-600 text-red-600 text-left font-bold" data-index="0">
+                  <span>1. SLIPKNOT - DUALITY</span>
+                  <span>4:12</span>
+                </button>
+                <button class="track-select-btn flex justify-between p-2 bg-zinc-950 border border-zinc-900 hover:border-red-600 text-zinc-400 text-left hover:text-white" data-index="1">
+                  <span>2. SLIPKNOT - PSYCHOSOCIAL</span>
+                  <span>4:43</span>
+                </button>
+                <button class="track-select-btn flex justify-between p-2 bg-zinc-950 border border-zinc-900 hover:border-red-600 text-zinc-400 text-left hover:text-white" data-index="2">
+                  <span>3. RAMMSTEIN - DEUTSCHLAND</span>
+                  <span>5:22</span>
+                </button>
+                <button class="track-select-btn flex justify-between p-2 bg-zinc-950 border border-zinc-900 hover:border-red-600 text-zinc-400 text-left hover:text-white" data-index="3">
+                  <span>4. SOAD - CHOP SUEY!</span>
+                  <span>3:30</span>
+                </button>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== TOUR SCHEDULE SECTION ==================== -->
+    <section id="tour" class="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b-2 border-red-600 pb-6">
+          <div>
+            <h2 class="text-5xl md:text-6xl font-metal text-white tracking-wider">RUST & RUIN WORLD TOUR 2026</h2>
+            <p class="font-mono text-red-500 mt-2 tracking-widest uppercase">[ LOUD. CHAOTIC. INESCAPABLE. ]</p>
+          </div>
+          <div class="font-mono text-zinc-500 text-sm tracking-wider uppercase">
+            CLICK ON "TICKET" TO SECURE ENTRY
+          </div>
+        </div>
+
+        <!-- Responsive Tour Schedule -->
+        <div class="space-y-4">
+          <!-- Tour Row 1 -->
+          <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950 border border-zinc-800 hover:border-red-600 p-4 gap-4 transition-all duration-150 shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]">
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
+              <!-- Date Label (No Gradients, Hard Solid Red) -->
+              <div class="bg-red-600 text-black font-sans font-bold text-center px-4 py-2 w-full sm:w-24 text-xl tracking-wider uppercase select-none">
+                JUN 12
+              </div>
+              <div class="text-center sm:text-left">
+                <div class="text-xl font-bold text-white tracking-wide">KYIV, UKRAINE</div>
+                <div class="font-mono text-sm text-zinc-400">ATLAS CLUB</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase border border-red-600 border-opacity-30 px-2 py-1 bg-black">SELLING OUT</span>
+              <button class="w-full md:w-auto bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 font-bold px-6 py-2.5 uppercase tracking-widest text-sm transition-all duration-150">
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+
+          <!-- Tour Row 2 -->
+          <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950 border border-zinc-800 hover:border-red-600 p-4 gap-4 transition-all duration-150 shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]">
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
+              <div class="bg-red-600 text-black font-sans font-bold text-center px-4 py-2 w-full sm:w-24 text-xl tracking-wider uppercase select-none">
+                JUN 14
+              </div>
+              <div class="text-center sm:text-left">
+                <div class="text-xl font-bold text-white tracking-wide">WARSAW, POLAND</div>
+                <div class="font-mono text-sm text-zinc-400">PROGRESJA</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+              <span class="font-mono text-xs text-zinc-500 tracking-widest uppercase border border-zinc-800 px-2 py-1 bg-black">AVAILABLE</span>
+              <button class="w-full md:w-auto bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 font-bold px-6 py-2.5 uppercase tracking-widest text-sm transition-all duration-150">
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+
+          <!-- Tour Row 3 (Sold Out State) -->
+          <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950 border border-zinc-800 p-4 gap-4 opacity-60">
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
+              <div class="bg-zinc-800 text-zinc-500 font-sans font-bold text-center px-4 py-2 w-full sm:w-24 text-xl tracking-wider uppercase select-none">
+                JUN 16
+              </div>
+              <div class="text-center sm:text-left">
+                <div class="text-xl font-bold text-zinc-400 tracking-wide">BERLIN, GERMANY</div>
+                <div class="font-mono text-sm text-zinc-500">SO36</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+              <span class="font-mono text-xs text-red-700 tracking-widest uppercase border border-red-900 border-opacity-40 px-2 py-1 bg-black">SOLD OUT</span>
+              <button disabled class="w-full md:w-auto bg-zinc-900 text-zinc-600 border-2 border-zinc-800 font-bold px-6 py-2.5 uppercase tracking-widest text-sm cursor-not-allowed">
+                SOLD OUT
+              </button>
+            </div>
+          </div>
+
+          <!-- Tour Row 4 -->
+          <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950 border border-zinc-800 hover:border-red-600 p-4 gap-4 transition-all duration-150 shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]">
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
+              <div class="bg-red-600 text-black font-sans font-bold text-center px-4 py-2 w-full sm:w-24 text-xl tracking-wider uppercase select-none">
+                JUN 18
+              </div>
+              <div class="text-center sm:text-left">
+                <div class="text-xl font-bold text-white tracking-wide">PRAGUE, CZECHIA</div>
+                <div class="font-mono text-sm text-zinc-400">FUTURUM</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+              <span class="font-mono text-xs text-zinc-500 tracking-widest uppercase border border-zinc-800 px-2 py-1 bg-black">AVAILABLE</span>
+              <button class="w-full md:w-auto bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 font-bold px-6 py-2.5 uppercase tracking-widest text-sm transition-all duration-150">
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+
+          <!-- Tour Row 5 -->
+          <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950 border border-zinc-800 hover:border-red-600 p-4 gap-4 transition-all duration-150 shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]">
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
+              <div class="bg-red-600 text-black font-sans font-bold text-center px-4 py-2 w-full sm:w-24 text-xl tracking-wider uppercase select-none">
+                JUN 21
+              </div>
+              <div class="text-center sm:text-left">
+                <div class="text-xl font-bold text-white tracking-wide">VIENNA, AUSTRIA</div>
+                <div class="font-mono text-sm text-zinc-400">ARENA</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+              <span class="font-mono text-xs text-zinc-500 tracking-widest uppercase border border-zinc-800 px-2 py-1 bg-black">LAST TICKETS</span>
+              <button class="w-full md:w-auto bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 font-bold px-6 py-2.5 uppercase tracking-widest text-sm transition-all duration-150">
+                Buy Ticket
+              </button>
+            </div>
+          </div>
+
+          <!-- Tour Row 6 (Festival State) -->
+          <div class="flex flex-col md:flex-row justify-between items-center bg-zinc-950 border border-zinc-800 hover:border-red-600 p-4 gap-4 transition-all duration-150 shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)]">
+            <div class="flex flex-col sm:flex-row items-center gap-6 w-full md:w-auto">
+              <div class="bg-red-600 text-black font-sans font-bold text-center px-4 py-2 w-full sm:w-24 text-xl tracking-wider uppercase select-none">
+                JUN 23
+              </div>
+              <div class="text-center sm:text-left">
+                <div class="text-xl font-bold text-white tracking-wide">WACKEN, GERMANY</div>
+                <div class="font-mono text-sm text-zinc-400">WACKEN OPEN AIR FESTIVAL</div>
+              </div>
+            </div>
+            <div class="flex items-center gap-4 w-full md:w-auto justify-between md:justify-end">
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase border border-red-600 border-opacity-30 px-2 py-1 bg-black">CO-HEADLINER</span>
+              <a href="https://wacken.com" target="_blank" class="w-full md:w-auto border-2 border-zinc-100 text-zinc-100 hover:bg-zinc-100 hover:text-black font-bold px-6 py-2.5 uppercase tracking-widest text-sm text-center transition-all duration-150">
+                Festival Info
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==================== DISCOGRAPHY SECTION ==================== -->
+    <section id="releases" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t-4 border-red-600">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 text-center">
+          <h2 class="text-5xl md:text-6xl font-metal text-red-600 tracking-wider">THE RELEASES / VAULT</h2>
+          <p class="font-mono text-zinc-400 mt-2 tracking-widest uppercase">COMPLETE STUDIO DISCOGRAPHY</p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Album 1 -->
+          <div class="bg-black border-2 border-zinc-800 hover:border-red-600 p-6 flex flex-col justify-between group shadow-[6px_6px_0px_0px_rgba(39,39,42,1)] hover:shadow-[6px_6px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <div>
+              <div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden relative mb-4">
+                <img 
+                  src="assets/album_vol3.png" 
+                  alt="Slipknot - Vol 3 Album" 
+                  class="w-full h-full object-cover filter contrast-125 transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                >
+              </div>
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase">[ LP // 2004 ]</span>
+              <h3 class="text-xl font-bold text-white tracking-wide uppercase mt-1">VOL. 3: (THE SUBLIMINAL VERSES)</h3>
+              <p class="font-mono text-xs text-zinc-500 mt-2 leading-relaxed">
+                Slipknot's third studio masterpiece, featuring the historic track "Duality". Heavy, melancholic, and aggressive.
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+              <span class="text-[10px] font-mono text-zinc-400">SLIPKNOT</span>
+              <button onclick="playTargetTrack(0)" class="text-red-500 hover:text-white font-mono text-xs uppercase tracking-widest font-bold">
+                [ STREAM ]
+              </button>
+            </div>
+          </div>
+
+          <!-- Album 2 -->
+          <div class="bg-black border-2 border-zinc-800 hover:border-red-600 p-6 flex flex-col justify-between group shadow-[6px_6px_0px_0px_rgba(39,39,42,1)] hover:shadow-[6px_6px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <div>
+              <div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden relative mb-4">
+                <img 
+                  src="assets/album_ahig.png" 
+                  alt="Slipknot - All Hope Is Gone Album" 
+                  class="w-full h-full object-cover filter contrast-125 transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                >
+              </div>
+              <span class="font-mono text-xs text-zinc-500 tracking-widest uppercase">[ LP // 2008 ]</span>
+              <h3 class="text-xl font-bold text-white tracking-wide uppercase mt-1">ALL HOPE IS GONE</h3>
+              <p class="font-mono text-xs text-zinc-500 mt-2 leading-relaxed">
+                Slipknot's heavy charting record, containing the brutal drum grooves and guitar solos of "Psychosocial".
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+              <span class="text-[10px] font-mono text-zinc-400">SLIPKNOT</span>
+              <button onclick="playTargetTrack(1)" class="text-red-500 hover:text-white font-mono text-xs uppercase tracking-widest font-bold">
+                [ STREAM ]
+              </button>
+            </div>
+          </div>
+
+          <!-- Album 3 -->
+          <div class="bg-black border-2 border-zinc-800 hover:border-red-600 p-6 flex flex-col justify-between group shadow-[6px_6px_0px_0px_rgba(39,39,42,1)] hover:shadow-[6px_6px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <div>
+              <div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden relative mb-4">
+                <img 
+                  src="assets/album_rammstein.png" 
+                  alt="Rammstein - Untitled Album" 
+                  class="w-full h-full object-cover filter contrast-125 transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                >
+              </div>
+              <span class="font-mono text-xs text-zinc-500 tracking-widest uppercase">[ LP // 2019 ]</span>
+              <h3 class="text-xl font-bold text-white tracking-wide uppercase mt-1">RAMMSTEIN (UNTITLED)</h3>
+              <p class="font-mono text-xs text-zinc-500 mt-2 leading-relaxed">
+                The massive self-titled return of Rammstein, led by the dramatic industrial rock soundscapes of "Deutschland".
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+              <span class="text-[10px] font-mono text-zinc-400">RAMMSTEIN</span>
+              <button onclick="playTargetTrack(2)" class="text-red-500 hover:text-white font-mono text-xs uppercase tracking-widest font-bold">
+                [ STREAM ]
+              </button>
+            </div>
+          </div>
+
+          <!-- Album 4 -->
+          <div class="bg-black border-2 border-zinc-800 hover:border-red-600 p-6 flex flex-col justify-between group shadow-[6px_6px_0px_0px_rgba(39,39,42,1)] hover:shadow-[6px_6px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <div>
+              <div class="aspect-square bg-zinc-900 border border-zinc-800 overflow-hidden relative mb-4">
+                <img 
+                  src="assets/album_toxicity.png" 
+                  alt="SOAD - Toxicity Album" 
+                  class="w-full h-full object-cover filter contrast-125 transition-transform duration-300 group-hover:scale-105"
+                  loading="lazy"
+                >
+              </div>
+              <span class="font-mono text-xs text-zinc-500 tracking-widest uppercase">[ LP // 2001 ]</span>
+              <h3 class="text-xl font-bold text-white tracking-wide uppercase mt-1">TOXICITY</h3>
+              <p class="font-mono text-xs text-zinc-500 mt-2 leading-relaxed">
+                The genre-defining alternative metal record by System of a Down, housing the chaotic and energetic "Chop Suey!".
+              </p>
+            </div>
+            
+            <div class="mt-6 pt-4 border-t border-zinc-900 flex justify-between items-center">
+              <span class="text-[10px] font-mono text-zinc-400">SOAD</span>
+              <button onclick="playTargetTrack(3)" class="text-red-500 hover:text-white font-mono text-xs uppercase tracking-widest font-bold">
+                [ STREAM ]
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== LIVE GALLERY SECTION ==================== -->
+    <section id="gallery" class="py-20 px-4 sm:px-6 lg:px-8 bg-black">
+      <div class="max-w-7xl mx-auto">
+        <div class="mb-12 text-center">
+          <h2 class="text-5xl md:text-6xl font-metal text-white tracking-wider">LIVE RITUALS</h2>
+          <p class="font-mono text-red-500 mt-2 tracking-widest uppercase">SNAPSHOTS OF MAXIMUM VOLUME</p>
+        </div>
+
+        <!-- Custom Grid Gallery (Adaptive Columns) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          
+          <!-- Image 1 -->
+          <div onclick="openLightbox(0)" class="relative aspect-[4/3] bg-zinc-950 border-2 border-zinc-800 hover:border-red-600 cursor-pointer overflow-hidden group shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <img 
+              src="assets/album_vol3.png" 
+              alt="Slipknot - Vol. 3: (The Subliminal Verses) Album Cover" 
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 contrast-125 transition-all duration-300 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase">SLIPKNOT // 2004</span>
+              <span class="text-lg font-bold text-white uppercase mt-0.5">VOL. 3: SUBLIMINAL</span>
+            </div>
+          </div>
+
+          <!-- Image 2 -->
+          <div onclick="openLightbox(1)" class="relative aspect-[4/3] bg-zinc-950 border-2 border-zinc-800 hover:border-red-600 cursor-pointer overflow-hidden group shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <img 
+              src="assets/album_ahig.png" 
+              alt="Slipknot - All Hope Is Gone Album Cover" 
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 contrast-125 transition-all duration-300 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase">SLIPKNOT // 2008</span>
+              <span class="text-lg font-bold text-white uppercase mt-0.5">ALL HOPE IS GONE</span>
+            </div>
+          </div>
+
+          <!-- Image 3 -->
+          <div onclick="openLightbox(2)" class="relative aspect-[4/3] bg-zinc-950 border-2 border-zinc-800 hover:border-red-600 cursor-pointer overflow-hidden group shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <img 
+              src="assets/album_rammstein.png" 
+              alt="Rammstein - Untitled Album Cover" 
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 contrast-125 transition-all duration-300 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase">RAMMSTEIN // 2019</span>
+              <span class="text-lg font-bold text-white uppercase mt-0.5">DEUTSCHLAND COVER</span>
+            </div>
+          </div>
+
+          <!-- Image 4 -->
+          <div onclick="openLightbox(3)" class="relative aspect-[4/3] bg-zinc-950 border-2 border-zinc-800 hover:border-red-600 cursor-pointer overflow-hidden group shadow-[4px_4px_0px_0px_rgba(39,39,42,1)] hover:shadow-[4px_4px_0px_0px_rgba(220,38,38,1)] transition-all duration-150">
+            <img 
+              src="assets/album_toxicity.png" 
+              alt="System of a Down - Toxicity Album Cover" 
+              class="w-full h-full object-cover filter grayscale hover:grayscale-0 contrast-125 transition-all duration-300 group-hover:scale-105"
+              loading="lazy"
+            >
+            <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-end p-4 opacity-0 group-hover:opacity-100 transition-opacity duration-150">
+              <span class="font-mono text-xs text-red-500 tracking-widest uppercase">SOAD // 2001</span>
+              <span class="text-lg font-bold text-white uppercase mt-0.5">TOXICITY CANVASES</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== JOIN THE COVEN (NEWSLETTER & CONTACT) ==================== -->
+    <section id="join" class="py-20 px-4 sm:px-6 lg:px-8 bg-zinc-950 border-t-4 border-red-600">
+      <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+        
+        <!-- Left Side: Band Booking Info / Guitar Pick Socials -->
+        <div class="lg:col-span-5 space-y-6">
+          <h2 class="text-5xl font-metal text-red-600 tracking-wider">JOIN THE COVEN</h2>
+          <p class="font-mono text-zinc-400 leading-relaxed">
+            SIGN UP TO RECEIVE TOUR ANNOUNCEMENTS, MERCH DROP ALERTS, AND HEAR NEW SOUNDS BEFORE ANYONE ELSE. NO SPAM. ONLY PURE BRUTALITY.
+          </p>
+
+          <div class="space-y-3 font-mono text-sm">
+            <div>
+              <span class="text-zinc-500 block uppercase">BOOKING &amp; ENQUIRIES:</span>
+              <a href="mailto:booking@nekrokorp.band" class="text-red-500 hover:text-white font-bold transition-colors">booking@nekrokorp.band</a>
+            </div>
+            <div>
+              <span class="text-zinc-500 block uppercase">PRESS &amp; MEDIA:</span>
+              <a href="mailto:horde@nekrokorp.band" class="text-red-500 hover:text-white font-bold transition-colors">horde@nekrokorp.band</a>
+            </div>
+          </div>
+
+          <!-- Socials with custom stylized shapes resembling guitar picks -->
+          <div class="space-y-3">
+            <span class="font-mono text-zinc-500 text-xs block tracking-widest uppercase">OUR BROADCASTS:</span>
+            <div class="flex gap-3">
+              <!-- Spotify Pick Icon -->
+              <a href="https://spotify.com" target="_blank" class="w-12 h-12 bg-black border border-zinc-800 hover:border-red-600 flex items-center justify-center hover:bg-zinc-900 transition-colors" aria-label="Spotify">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm4.586 14.424c-.18.295-.565.387-.86.207-2.377-1.454-5.37-1.783-8.893-.982-.336.075-.668-.135-.744-.47-.076-.336.135-.668.47-.743 3.856-.88 7.15-.502 9.82.133.296.18.388.565.207.855zm1.224-2.724c-.226.367-.707.487-1.074.26-2.72-1.672-6.87-2.157-10.078-1.182-.413.125-.847-.107-.972-.52-.125-.413.107-.847.52-.972 3.67-1.114 8.24-.57 11.343 1.338.368.226.488.707.26 1.076zm.105-2.81C14.692 8.913 9.24 8.73 6.07 9.692c-.496.15-1.016-.13-1.167-.626-.15-.496.13-1.015.626-1.167 3.664-1.11 9.67-.9 13.43 1.332.446.265.59.84.327 1.286-.264.446-.84.59-1.285.327z"/>
+                </svg>
+              </a>
+              <!-- Bandcamp Pick Icon -->
+              <a href="https://bandcamp.com" target="_blank" class="w-12 h-12 bg-black border border-zinc-800 hover:border-red-600 flex items-center justify-center hover:bg-zinc-900 transition-colors" aria-label="Bandcamp">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M0 18.75l7.437-13.5h16.563l-7.438 13.5h-16.562z"/>
+                </svg>
+              </a>
+              <!-- YouTube Pick Icon -->
+              <a href="https://youtube.com" target="_blank" class="w-12 h-12 bg-black border border-zinc-800 hover:border-red-600 flex items-center justify-center hover:bg-zinc-900 transition-colors" aria-label="YouTube">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.518 3.545 12 3.545 12 3.545s-7.518 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.033 0 12 0 12s0 3.967.502 5.837a3.003 3.003 0 0 0 2.11 2.11c1.87.508 9.388.508 9.388.508s7.518 0 9.388-.508a3.002 3.002 0 0 0 2.11-2.11C24 15.967 24 12 24 12s0-3.967-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                </svg>
+              </a>
+              <!-- Instagram Pick Icon -->
+              <a href="https://instagram.com" target="_blank" class="w-12 h-12 bg-black border border-zinc-800 hover:border-red-600 flex items-center justify-center hover:bg-zinc-900 transition-colors" aria-label="Instagram">
+                <svg class="w-5 h-5 text-red-600" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.051.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 1 0 0 12.324 6.162 6.162 0 0 0 0-12.324zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.406-11.845a1.44 1.44 0 1 0 0 2.881 1.44 1.44 0 0 0 0-2.881z"/>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Side: Newsletter Submit Form -->
+        <div class="lg:col-span-7 bg-black border-4 border-red-600 p-6 md:p-8 shadow-[8px_8px_0px_0px_rgba(220,38,38,1)]">
+          <form id="newsletter-form" onsubmit="handleSignup(event)" class="space-y-6">
+            <h3 class="text-2xl font-mono font-bold text-white uppercase tracking-wider border-b border-zinc-800 pb-3">
+              RITUAL REGISTRATION FORM
+            </h3>
+
+            <!-- Email Input -->
+            <div class="space-y-2">
+              <label for="email" class="block font-mono text-xs text-zinc-400 uppercase tracking-widest">
+                Email Address *
+              </label>
+              <input 
+                type="email" 
+                id="email" 
+                required 
+                placeholder="YOUR.SOUL@COVEN.COM"
+                class="w-full bg-zinc-950 border-2 border-zinc-800 focus:border-red-600 p-4 font-mono text-white placeholder-zinc-700 outline-none transition-colors"
+              >
+            </div>
+
+            <!-- Ritual Preferred Location Select -->
+            <div class="space-y-2">
+              <label for="location" class="block font-mono text-xs text-zinc-400 uppercase tracking-widest">
+                Preferred Ritual Location *
+              </label>
+              <select 
+                id="location" 
+                required
+                class="w-full bg-zinc-950 border-2 border-2 border-zinc-800 focus:border-red-600 p-4 font-mono text-white outline-none transition-colors appearance-none cursor-pointer"
+              >
+                <option value="" disabled selected class="text-zinc-700">SELECT RITUAL SECTOR</option>
+                <option value="Kyiv">KYIV, UKRAINE (ATLAS)</option>
+                <option value="Warsaw">WARSAW, POLAND (PROGRESJA)</option>
+                <option value="Prague">PRAGUE, CZECHIA (FUTURUM)</option>
+                <option value="Vienna">VIENNA, AUSTRIA (ARENA)</option>
+                <option value="Wacken">WACKEN, GERMANY (W:O:A)</option>
+                <option value="Other">OTHER SECTORS / WORLDWIDE</option>
+              </select>
+            </div>
+
+            <!-- Custom Checkbox (Strict Brutalist Styling) -->
+            <div class="flex items-start gap-3">
+              <input 
+                type="checkbox" 
+                id="agree" 
+                required
+                class="mt-1 w-5 h-5 accent-red-600 cursor-pointer bg-zinc-950 border-2 border-zinc-800 rounded-none appearance-none checked:bg-red-600 checked:border-red-600 relative after:content-['✓'] after:absolute after:hidden checked:after:block after:text-black after:font-bold after:left-1 after:-top-1"
+              >
+              <label for="agree" class="font-mono text-xs text-zinc-500 select-none cursor-pointer leading-tight">
+                I VOLUNTARILY AGREE TO RECEIVE SONIC BLAST NOTIFICATIONS AND UNDERSTAND THAT MY DATA IS ENCRYPTED IN THE VOID.
+              </label>
+            </div>
+
+            <!-- Submit Button (Brutalist Style) -->
+            <button 
+              type="submit" 
+              class="w-full bg-red-600 text-black border-2 border-red-600 hover:bg-black hover:text-red-600 font-bold p-4 uppercase tracking-widest text-lg transition-all duration-150"
+            >
+              SUBMIT IN BLOOD
+            </button>
+          </form>
+
+          <!-- Success State Container (Hidden by default) -->
+          <div id="signup-success" class="hidden text-center py-10 space-y-4">
+            <svg class="w-16 h-16 text-red-600 mx-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2">
+              <path stroke-linecap="square" d="M5 13l4 4L19 7" />
+            </svg>
+            <h4 class="text-3xl font-metal text-red-600 tracking-wider">YOUR SOUL IS REGISTERED</h4>
+            <p class="font-mono text-zinc-400 text-sm max-w-md mx-auto">
+              WE HAVE SENT SECURED INSTRUCTIONS TO <span id="registered-email" class="text-white font-bold"></span>. PREPARE FOR THUNDER.
+            </p>
+            <button onclick="resetSignupForm()" class="border border-zinc-800 text-zinc-500 hover:text-white px-4 py-2 font-mono text-xs uppercase tracking-widest">
+              [ REGISTER ANOTHER ]
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-black border-t-4 border-zinc-800 py-12 px-4 sm:px-6 lg:px-8 font-mono text-xs text-zinc-500 tracking-wider">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-6">
+      
+      <!-- Left: Copyright and Credits -->
+      <div class="text-center md:text-left space-y-2">
+        <div class="text-zinc-400 text-sm font-bold tracking-widest font-metal">
+          NEKROKORP // THRONE OF RUST 2026
+        </div>
+        <p>© 2026 NEKROKORP. Всі права захищено (навіть у потойбіччі).</p>
+        <p>ЛАБОРАТОРНА РОБОТА №14 • Варіант 14 - Музичний гурт</p>
+      </div>
+
+      <!-- Center: Student Variant Details -->
+      <div class="text-center border-t border-b md:border-t-0 md:border-b-0 border-zinc-800 py-4 md:py-0">
+        <p class="text-zinc-400 font-bold uppercase mb-1">Дисципліна:</p>
+        <p class="text-zinc-500 text-xs">Веб-технології та веб-дизайн</p>
+        <p class="text-zinc-600 text-[10px] mt-1">Виконав студент 2 курсу, 14 варіант</p>
+      </div>
+
+      <!-- Right: Back to Top Button with Custom Icon -->
+      <div class="text-center md:text-right">
+        <a href="#header" class="border border-zinc-800 hover:border-red-600 px-4 py-2.5 text-zinc-400 hover:text-red-500 font-bold transition-all uppercase tracking-widest text-xs inline-flex items-center gap-2">
+          <span>Rise to Top</span>
+          <svg class="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+            <path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==================== INTERACTIVE LIGHTBOX MODAL (LIVE GALLERY) ==================== -->
+  <div id="lightbox" class="fixed inset-0 z-[100] bg-black bg-opacity-95 hidden flex-col items-center justify-center p-4">
+    <!-- Close Button -->
+    <button onclick="closeLightbox()" class="absolute top-6 right-6 text-zinc-400 hover:text-red-600 transition-colors" aria-label="Close Gallery">
+      <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+        <path stroke-linecap="square" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+
+    <!-- Navigation Arrows -->
+    <button onclick="changeLightboxImage(-1)" class="absolute left-6 text-zinc-400 hover:text-red-600 transition-colors" aria-label="Previous Image">
+      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+        <path stroke-linecap="square" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+    <button onclick="changeLightboxImage(1)" class="absolute right-6 text-zinc-400 hover:text-red-600 transition-colors" aria-label="Next Image">
+      <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5">
+        <path stroke-linecap="square" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Target Image Container with Brutalist Thick Borders -->
+    <div class="max-w-4xl max-h-[80vh] bg-zinc-950 border-4 border-red-600 shadow-[10px_10px_0px_0px_rgba(220,38,38,1)] relative overflow-hidden">
+      <img id="lightbox-img" src="" alt="Live Ritual Photo" class="max-w-full max-h-[75vh] object-contain filter grayscale hover:grayscale-0 transition-all duration-300">
+      
+      <!-- Caption inside Lightbox -->
+      <div class="bg-black border-t-2 border-red-600 p-4 font-mono text-xs flex justify-between text-zinc-400">
+        <span id="lightbox-caption">KYIV // 2026</span>
+        <span id="lightbox-counter">1 / 4</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== JAVASCRIPT LOGIC ==================== -->
+  <script src="script.js"></script>
+</body>
+</html>
